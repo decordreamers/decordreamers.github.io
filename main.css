@@ -116,6 +116,7 @@ header {
   position: relative;
   overflow: hidden;
   padding-bottom: 4rem;
+   border-radius: 28 px; 
 }
 
 header::before,
@@ -142,6 +143,7 @@ header::after {
   background: rgba(255, 255, 255, 0.28);
   bottom: 60px;
   left: -40px;
+   border-radius: 28 px; 
 }
 
 nav {
@@ -155,6 +157,7 @@ nav {
   padding: 1.25rem 0;
   background: rgba(255, 248, 243, 0.78);
   backdrop-filter: blur(14px);
+  border-radius: 28 px; 
 }
 
 nav > div h1 {
