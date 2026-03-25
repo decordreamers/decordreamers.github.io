@@ -111,58 +111,39 @@ section > div:first-child {
    Header/Nav
    ========== */
 
+/* ==========
+   Header/Nav
+   ========== */
+
 header {
-  background: var(--gradient-main);
+  width: min(100% - 2rem, var(--max-width));
+  margin: 1.2rem auto 0;
+  background: transparent;
   position: relative;
-  overflow: hidden;
-  padding-bottom: 4rem;
-   border-radius: 28 px; 
-}
-
-header::before,
-header::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(10px);
-  opacity: 0.45;
-  z-index: 0;
-}
-
-header::before {
-  width: 280px;
-  height: 280px;
-  background: rgba(255, 255, 255, 0.35);
-  top: -80px;
-  right: -40px;
-}
-
-header::after {
-  width: 200px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.28);
-  bottom: 60px;
-  left: -40px;
-   border-radius: 28 px; 
+  overflow: visible;
+  padding-bottom: 0;
+  border-radius: 0;
 }
 
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 20;
   display: grid;
   grid-template-columns: 1.2fr 2fr 1fr;
   align-items: center;
   gap: 1.5rem;
-  padding: 1.25rem 0;
-  background: rgba(255, 248, 243, 0.78);
-  backdrop-filter: blur(14px);
-  border-radius: 28 px; 
+  padding: 1rem 1.2rem;
+  background: rgba(255, 248, 243, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  position: relative;
+  top: 0;
+  z-index: 20;
 }
 
 nav > div h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   color: var(--text-dark);
   line-height: 1;
 }
@@ -170,14 +151,14 @@ nav > div h1 {
 nav > div p {
   font-size: 0.9rem;
   color: var(--text-soft);
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1.15rem;
 }
 
 nav ul a {
@@ -190,7 +171,7 @@ nav ul a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.3rem;
+  bottom: -0.25rem;
   width: 0;
   height: 2px;
   background: var(--gold);
@@ -211,24 +192,23 @@ nav form {
 }
 
 nav input[type="search"] {
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
-  width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem 1rem;
   color: var(--text-dark);
 }
 
 nav button {
   border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
   background: var(--gradient-main);
   color: var(--text-dark);
-  padding: 0.75rem 1.15rem;
-  border-radius: 999px;
-  cursor: pointer;
   font-weight: 600;
+  cursor: pointer;
 }
-
 /* ===========
    Hero Section
    =========== */
@@ -664,6 +644,7 @@ input:focus-visible {
 @media (max-width: 1100px) {
   nav {
     grid-template-columns: 1fr;
+    border-radius: 28px;
     text-align: center;
   }
 
@@ -672,7 +653,7 @@ input:focus-visible {
   }
 
   nav form {
-    max-width: 420px;
+    max-width: 430px;
     margin: 0 auto;
   }
 
